@@ -1,0 +1,134 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  /* 부드러운 회색 배경 */
+  color: #333;
+  line-height: 1.6;
+}
+
+.app {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  /* 더 부드러운 그림자 */
+  border-radius: 0 0 15px 15px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 1.8em;
+  margin: 0;
+  color: #1a73e8;
+  /* 밝고 현대적인 블루 */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.search-input {
+  width: 90%;
+  max-width: 350px;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  /* 더 둥근 검색창 */
+  font-size: 1em;
+  margin-top: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #1a73e8;
+  outline: none;
+  box-shadow: 0 4px 15px rgba(26, 115, 232, 0.2);
+}
+
+.menu-container {
+  display: grid;
+  gap: 20px;
+  padding: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* 더 유연한 그리드 */
+}
+
+.menu-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  /* 더 자연스러운 그림자 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  border-left: 4px solid #1a73e8;
+  /* 왼쪽에 강조선 추가 */
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.menu-card h2 {
+  font-size: 1.4em;
+  margin: 0 0 12px 0;
+  color: #1a73e8;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.menu-card p {
+  margin: 8px 0;
+  font-size: 1em;
+  color: #555;
+  line-height: 1.5;
+}
+
+.menu-card strong {
+  color: #1a73e8;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.4em;
+  }
+
+  .search-input {
+    width: 85%;
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  .menu-card {
+    padding: 15px;
+  }
+
+  .menu-card h2 {
+    font-size: 1.2em;
+  }
+
+  .menu-card p {
+    font-size: 0.9em;
+  }
+
+  .no-results {
+    text-align: center;
+    color: #666;
+    font-size: 1.1em;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin: 20px;
+  }
+}
