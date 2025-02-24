@@ -107,6 +107,24 @@ header h1 {
   /* 빨간색 */
 }
 
+.menu-card .total-option {
+  color: #333;
+  /* 검은색 */
+  font-weight: 600;
+}
+
+.menu-card .sweet-option {
+  color: #ff0000;
+  /* 빨간색 */
+  font-weight: 600;
+}
+
+/* 나머지 strong 태그는 기존 블루 유지 */
+.menu-card strong {
+  color: #1a73e8;
+  font-weight: 600;
+}
+
 @media (max-width: 600px) {
   header h1 {
     font-size: 1.4em;
@@ -139,18 +157,5 @@ header h1 {
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     margin: 20px;
-  }
-
-  /* "연하게", "진하게", "덜 달게", "더 달게" 텍스트를 빨간색으로 변경 */
-  .menu-card .sweet-option {
-    color: #ff0000;
-    /* 빨간색 */
-    font-weight: 600;
-  }
-
-  /* 나머지 strong 태그는 기존 블루 유지 */
-  .menu-card strong {
-    color: #1a73e8;
-    font-weight: 600;
   }
 }

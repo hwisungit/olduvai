@@ -86,11 +86,11 @@ function App() {
               {item.paste && item.paste !== '-' && <p><strong>페이스트:</strong> {item.paste}</p>}
               {item.base && item.base !== '-' && <p><strong>베이스:</strong> {item.base}</p>}
               {item.cold_brew && item.cold_brew !== '-' && <p><strong>콜드브루 원액:</strong> {item.cold_brew}</p>}
-              {item.total && item.total !== '-' && <p><strong>총량:</strong> {item.total}</p>}
-              {item.less_sweet && item.less_sweet !== '-' && <p><strong>덜 달게:</strong> {item.less_sweet}</p>}
-              {item.more_sweet && item.more_sweet !== '-' && <p><strong>더 달게:</strong> {item.more_sweet}</p>}
-              {item.light && item.light !== '-' && <p><strong>연하게:</strong> {item.light}</p>}
-              {item.strong && item.strong !== '-' && <p><strong>진하게:</strong> {item.strong}</p>}
+              {item.total && item.total !== '-' && <p><strong className='total-option'>총량:</strong> {item.total}</p>}
+              {item.less_sweet && item.less_sweet !== '-' && <p><strong className="sweet-option">덜 달게:</strong> {item.less_sweet}</p>}
+              {item.more_sweet && item.more_sweet !== '-' && <p><strong className="sweet-option">더 달게:</strong> {item.more_sweet}</p>}
+              {item.light && item.light !== '-' && <p><strong className="sweet-option">연하게:</strong> {item.light}</p>}
+              {item.strong && item.strong !== '-' && <p><strong className="sweet-option">진하게:</strong> {item.strong}</p>}
             </div>
           ))
         ) : (
