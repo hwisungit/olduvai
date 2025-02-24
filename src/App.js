@@ -62,7 +62,7 @@ function App() {
   return (
     <div className="app">
       <header>
-        <h1>올두바이 레시피</h1>
+        <h1>올두바이 임시 레시피</h1>
         <input
           type="text"
           placeholder="음료 검색..."
