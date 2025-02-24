@@ -33,23 +33,23 @@ const menuData = [
 
   // 차(Tea) 음료
   { name: '아쌈밀크티', category: '차', base: '75g', liquid: '215g(우유)', total: '290g', less_sweet: '50g', more_sweet: '100g' },
-  { name: '말차라떼', category: '차', base: '60g+1펌프(설탕시럽)', liquid: '215g(우유)', total: '290g', less_sweet: '40g', more_sweet: '80g' },
+  { name: '말차라떼', category: '차', base: '60g', syrup: '1펌프(설탕시럽)', liquid: '215g(우유)', total: '290g', less_sweet: '40g', more_sweet: '80g' },
   { name: '타바론티 6종', category: '차', base: '티백 1ea', liquid: '290g(물)', total: '290g', less_sweet: '-', more_sweet: '-' },
 
   // 고구마, 마롱(밤)
   { name: '고구마라떼', category: '고구마/마롱', paste: '90g', milk: '200g', total: '290g', less_sweet: '60g', more_sweet: '120g' },
   { name: '마롱라떼', category: '고구마/마롱', paste: '60g', milk: '200g', total: '260g', less_sweet: '40g', more_sweet: '80g' },
-  { name: '마롱슈가라떼', category: '고구마/마롱', paste: '50g+1펌프(설탕)', milk: '200g', total: '260g', less_sweet: '-', more_sweet: '-' },
+  { name: '마롱슈가라떼', category: '고구마/마롱', espresso: '25g', paste: '50g', syrup: '1펌프(설탕시럽)', milk: '200g', total: '260g', less_sweet: '-', more_sweet: '-' },
 
   // 콜드브루
   { name: '콜드브루', category: '콜드브루', cold_brew: '90g', liquid: '200g(물)', total: '290g', less_sweet: '-', more_sweet: '-', light: '45g', strong: '135g' },
   { name: '콜드브루라떼', category: '콜드브루', cold_brew: '90g', liquid: '200g(우유)', total: '290g', less_sweet: '-', more_sweet: '-', light: '45g', strong: '135g' },
-  { name: '콜드브루바닐라라떼', category: '콜드브루', cold_brew: '90g', liquid: '160g(우유)+3펌프(바닐라)', total: '290g', less_sweet: '2펌프(바닐라)', more_sweet: '4펌프(바닐라)', light: '45g', strong: '135g' },
+  { name: '콜드브루바닐라라떼', category: '콜드브루', syrup: '3펌프(바닐라)', cold_brew: '90g', liquid: '160g(우유)', total: '290g', less_sweet: '2펌프(바닐라)', more_sweet: '4펌프(바닐라)', light: '45g', strong: '135g' },
 
   // 기타
   { name: '아이스티', category: '기타', total: '290g', less_sweet: '-', more_sweet: '-' },
-  { name: '아이스티(덜달게)', category: '기타', water: '40g', total: '290g', less_sweet: '250g', more_sweet: '-' },
-  { name: '아이스티샷추가', category: '기타', espresso: '20g', syrup: '250g+1펌프(설탕)', total: '290g', less_sweet: '-', more_sweet: '-' },
+  { name: '아이스티(덜달게)', category: '기타', water: '250(아이스티)+40g(물)', total: '290g', less_sweet: '-', more_sweet: '-' },
+  { name: '아이스티샷추가', category: '기타', water: '250', espresso: '25g', syrup: '1펌프(설탕)', total: '290g', less_sweet: '-', more_sweet: '-' },
 ];
 
 function App() {
@@ -77,18 +77,20 @@ function App() {
             <div className="menu-card" key={index}>
               <h2>{item.name}</h2>
               <p><strong>카테고리:</strong> {item.category}</p>
-              <p><strong>에스프레소:</strong> {item.espresso || '-'}</p>
-              <p><strong>시럽:</strong> {item.syrup || '-'}</p>
-              <p><strong>과일청:</strong> {item.fruit_syrup || '-'}</p>
-              <p><strong>페이스트:</strong> {item.paste || '-'}</p>
-              <p><strong>베이스:</strong> {item.base || '-'}</p>
-              <p><strong>콜드브루 원액:</strong> {item.cold_brew || '-'}</p>
-              <p><strong>물/우유/기타:</strong> {item.water || item.milk || item.liquid || '-'}</p>
-              <p><strong>총량:</strong> {item.total || '-'}</p>
-              <p><strong>덜 달게:</strong> {item.less_sweet || '-'}</p>
-              <p><strong>더 달게:</strong> {item.more_sweet || '-'}</p>
-              {item.light && <p><strong>연하게:</strong> {item.light}</p>}
-              {item.strong && <p><strong>진하게:</strong> {item.strong}</p>}
+              {item.espresso && item.espresso !== '-' && <p><strong>에스프레소:</strong> {item.espresso}</p>}
+              {item.syrup && item.syrup !== '-' && <p><strong>시럽:</strong> {item.syrup}</p>}
+              {item.water && item.water !== '-' && <p><strong>물:</strong> {item.water}</p>}
+              {item.milk && item.milk !== '-' && <p><strong>우유:</strong> {item.milk}</p>}
+              {item.liquid && item.liquid !== '-' && <p><strong>기타(물/탄산수):</strong> {item.liquid}</p>}
+              {item.fruit_syrup && item.fruit_syrup !== '-' && <p><strong>과일청:</strong> {item.fruit_syrup}</p>}
+              {item.paste && item.paste !== '-' && <p><strong>페이스트:</strong> {item.paste}</p>}
+              {item.base && item.base !== '-' && <p><strong>베이스:</strong> {item.base}</p>}
+              {item.cold_brew && item.cold_brew !== '-' && <p><strong>콜드브루 원액:</strong> {item.cold_brew}</p>}
+              {item.total && item.total !== '-' && <p><strong>총량:</strong> {item.total}</p>}
+              {item.less_sweet && item.less_sweet !== '-' && <p><strong>덜 달게:</strong> {item.less_sweet}</p>}
+              {item.more_sweet && item.more_sweet !== '-' && <p><strong>더 달게:</strong> {item.more_sweet}</p>}
+              {item.light && item.light !== '-' && <p><strong>연하게:</strong> {item.light}</p>}
+              {item.strong && item.strong !== '-' && <p><strong>진하게:</strong> {item.strong}</p>}
             </div>
           ))
         ) : (
