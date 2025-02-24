@@ -3,24 +3,24 @@ import './App.css';
 
 const menuData = [
   // 에스프레소 음료
-  { name: '아메리카노', category: '에스프레소', espresso: '40g', syrup: '-', water: '240g', total: '290g', less_sweet: '-', more_sweet: '-' },
-  { name: '헤이즐넛아메리카노', category: '에스프레소', espresso: '40g', syrup: '2펌프', water: '220g', total: '290g', less_sweet: '1펌프', more_sweet: '3펌프' },
-  { name: '에스프레소 HOT', category: '에스프레소', espresso: '40g', syrup: '설탕스틱,티스푼', water: '-', total: '-', less_sweet: '-', more_sweet: '-' },
+  { name: '아메리카노', category: '에스프레소', espresso: '50g', syrup: '-', water: '240g', total: '290g', less_sweet: '-', more_sweet: '-' },
+  { name: '헤이즐넛아메리카노', category: '에스프레소', espresso: '50g', syrup: '2펌프', water: '220g', total: '290g', less_sweet: '1펌프', more_sweet: '3펌프' },
+  { name: '에스프레소 HOT', category: '에스프레소', espresso: '50g', syrup: '설탕스틱,티스푼', water: '-', total: '-', less_sweet: '-', more_sweet: '-' },
 
   // 라떼(우유) 음료
-  { name: '카페라떼', category: '라떼', espresso: '40g', syrup: '-', milk: '240g', total: '290g', less_sweet: '-', more_sweet: '-' },
-  { name: '바닐라라떼', category: '라떼', espresso: '40g', syrup: '3펌프', milk: '210g', total: '290g', less_sweet: '2펌프', more_sweet: '4펌프' },
-  { name: '헤이즐넛라떼', category: '라떼', espresso: '40g', syrup: '3펌프', milk: '210g', total: '290g', less_sweet: '2펌프', more_sweet: '4펌프' },
-  { name: '돌체라떼', category: '라떼', espresso: '40g', syrup: '45g(연유)', milk: '200g', total: '290g', less_sweet: '30g', more_sweet: '60g' },
-  { name: '카푸치노 HOT', category: '라떼', espresso: '40g', syrup: '시나몬 파우더', milk: '150g+50g(거품)', total: '250g', less_sweet: '-', more_sweet: '-' },
-  { name: '플랫화이트 HOT', category: '라떼', espresso: '40g', syrup: '-', milk: '150g', total: '200g', less_sweet: '-', more_sweet: '-' },
+  { name: '카페라떼', category: '라떼', espresso: '50g', syrup: '-', milk: '240g', total: '290g', less_sweet: '-', more_sweet: '-' },
+  { name: '바닐라라떼', category: '라떼', espresso: '50g', syrup: '3펌프', milk: '210g', total: '290g', less_sweet: '2펌프', more_sweet: '4펌프' },
+  { name: '헤이즐넛라떼', category: '라떼', espresso: '50g', syrup: '3펌프', milk: '210g', total: '290g', less_sweet: '2펌프', more_sweet: '4펌프' },
+  { name: '돌체라떼', category: '라떼', espresso: '50g', syrup: '45g(연유)', milk: '200g', total: '290g', less_sweet: '30g', more_sweet: '60g' },
+  { name: '카푸치노 HOT', category: '라떼', espresso: '50g', syrup: '시나몬 파우더', milk: '150g+50g(거품)', total: '250g', less_sweet: '-', more_sweet: '-' },
+  { name: '플랫화이트 HOT', category: '라떼', espresso: '50g', syrup: '-', milk: '150g', total: '200g', less_sweet: '-', more_sweet: '-' },
   { name: '우유', category: '라떼', espresso: '-', syrup: '-', milk: '300g', total: '300g', less_sweet: '-', more_sweet: '-' },
 
   // 초코 음료
   { name: '초코라떼', category: '초코', syrup: '45g', milk: '245g', total: '290g', less_sweet: '30g', more_sweet: '60g' },
   { name: '화이트초코라떼', category: '초코', syrup: '45g', milk: '245g', total: '290g', less_sweet: '30g', more_sweet: '60g' },
-  { name: '카페모카', category: '초코', espresso: '40g', syrup: '45g', milk: '200g', total: '290g', less_sweet: '30g', more_sweet: '60g' },
-  { name: '화이트모카', category: '초코', espresso: '40g', syrup: '45g', milk: '200g', total: '290g', less_sweet: '30g', more_sweet: '60g' },
+  { name: '카페모카', category: '초코', espresso: '50g', syrup: '45g', milk: '200g', total: '290g', less_sweet: '30g', more_sweet: '60g' },
+  { name: '화이트모카', category: '초코', espresso: '50g', syrup: '45g', milk: '200g', total: '290g', less_sweet: '30g', more_sweet: '60g' },
 
   // 과일 음료
   { name: '딸기라떼', category: '과일', fruit_syrup: '80g', syrup: '10g(연유)', liquid: '200g(우유)', total: '290g', less_sweet: '60g', more_sweet: '100g' },
