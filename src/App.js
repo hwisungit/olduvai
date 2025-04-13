@@ -94,7 +94,7 @@ function App() {
             </div>
           ))
         ) : (
-          <p className="no-results">검색 결과가 없습니다.</p>
+          <p className="no-results">검색 결과가 없습니다!</p>
         )}
       </div>
     </div>
